@@ -1,23 +1,4 @@
-/**
-* Template Name: HeroBiz
-* File: variables.css
-* Description: Easily customize colors, typography, and other repetitive properties used in the template main stylesheet file main.css
-* 
-* Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-* 
-* Contents:
-* 1. HeroBiz template variables 
-* 2. Override default Bootstrap variables
-* 3. Set color and background class names
-*
-* Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
-*/
 
-/*--------------------------------------------------------------
-# 1. HeroBiz template variables 
---------------------------------------------------------------*/
 :root {
 
   /* Fonts */
@@ -96,9 +77,6 @@
   
 }
 
-/*--------------------------------------------------------------
-# 2. Override default Bootstrap variables
---------------------------------------------------------------*/
 :root {
 
   --bs-blue: var(--color-blue);
@@ -155,10 +133,6 @@
 
 }
 
-/*--------------------------------------------------------------
-# 3. Set color and background class names
---------------------------------------------------------------*/
-/* Fonts */
 .font-default { font-family: var(--font-default) !important; }
 .font-primary { font-family: var(--font-primary) !important;}
 .font-secondary { font-family: var(--font-secondary) !important; }
