@@ -40,9 +40,9 @@ async function addNewUser() {
       "role": "USER"
    }
 
-   // if (!newUser.email) alert('Campo Email é obrigatório!')
-   // if (!newUser.password) alert('Campo Password é obrigatório!')
-   // if (!newUser.name) alert('Campo Nome é obrigatório!')
+   if (!newUser.email) renderToastify("Campo email está inválido.");
+   if (!newUser.password) renderToastify("Campo senha está inválido.");
+   if (!newUser.name) renderToastify("Campo nome está inválido.");
 
    try {
       await axios.post(url, newUser);
