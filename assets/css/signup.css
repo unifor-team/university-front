@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@100&display=swap');
+
+@keyframes float{
+
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-30px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.body {
+  background-color: #E7E7E7;
+}
+
+.signup {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup input{
+
+  height: 65px;
+  border-color: #0EA2BD;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #E7E7E7;
+  ;
+  
+}
+.signup input::placeholder{
+  color: #ffffff;
+}
+.signup-container {
+  width: 460px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 40px;
+}
+
+.logo {
+  width: center; /*mexi aqui, tava 109px*/
+  height: 109px;
+  margin-top: 40px;
+  transform: translateY(0px);
+  animation: float 5s ease-in-out infinite;
+
+}
+.button-signup {
+  height: 65px;
+  background-color: #0EA2BD;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+.button-home{
+  background-color: #0EA2BD;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 27px;
+  text-align: center;
+}
+.a
+.button-signup:active{
+  box-shadow: 0 0 0 0 #054753, inset 3px 3px 3px #075563;
+  transform: scale(0.97);
+}
+.button-signup:hover{
+  box-shadow: 0 0 0 0 #054753, inset 3px 3px 3px #075563;
+}

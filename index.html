@@ -8,6 +8,7 @@
   <title>Universitech</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -36,11 +37,16 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <h1>Universitech<span>.</span></h1>
       </a>
-
-
-      <a class="btn-getstarted scrollto" href="index.html#about">Entrar</a>
-
+      <div id="login">
+        <a class="btn-getstarted scrollto"  href="signin.html">Entrar</a>
+      </div>
+      <div id="logout">
+        <a class="btn-getstarted scrollto" href="index.html" onclick="logout()">logout</a>
+      </div>
+      
+     
     </div>
+      
   </header>
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
@@ -49,7 +55,9 @@
       <h2>Bem vindo(a) a <span>Universitech</span></h2>
       <p>A universidade perfeita para você que deseja imergir em tecnologia.</p>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Cadastrar-se</a>
+        <div id="hide-signup">
+          <a href="signup.html" class="btn-get-started scrollto">Cadastrar-se</a>
+        </div> 
       </div>
     </div>
   </section>
@@ -1281,7 +1289,8 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="ButtonControl.js"></script>
+  
 
   <script src="assets/js/main.js"></script>
 
