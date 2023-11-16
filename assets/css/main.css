@@ -1232,6 +1232,7 @@ section {
   color: var(--color-secondary);
   font-size: 48px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .cta .content h3 em {
@@ -1466,6 +1467,9 @@ section {
 --------------------------------------------------------------*/
 .features .nav-tabs {
   border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .features .nav-link {
@@ -1493,6 +1497,7 @@ section {
   font-weight: 600;
   margin: 10px 0 0 0;
   color: var(--color-secondary);
+  
 }
 
 .features .nav-link:hover {
@@ -3176,3 +3181,4 @@ section {
   background: var(--color-primary);
   text-decoration: none;
 }
+
