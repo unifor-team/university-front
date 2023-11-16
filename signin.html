@@ -22,19 +22,19 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/signup.css" rel="stylesheet">
 
-  <title>Cadastrar-se</title>
+  <title>Login</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="signup.js" defer></script>
+  <script src="signin.js" defer></script>
 </head>
-<body class="body">
+<body class="body" >
+    <a class="button-home" href="index.html"> Home </a>
     <section class="signup">
       <div class="signup-container">
         <img src="https://www.svgrepo.com/show/5015/college-pin.svg" class="img-fluid animated logo">
           <input type="email" placeholder="Email" id="email" required/>
           <input type="password" placeholder="Senha" id="password" required/>
-          <input type="text" placeholder="Nome" id="name" required/>
-          <button type="submit" class="button-signup" onclick="addNewUser()"> Cadastrar </button>
-        <p>Já possui uma conta? Entre <a href="signin.html">aqui</a>.</p>
+          <button type="submit" class="button-signup" onclick="addNewUser()"> Login </button>
+        <p>Não possui uma conta?  <a href="signup.html">Clique aqui</a>.</p>
       </div>
     </section>
 </body>
