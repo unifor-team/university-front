@@ -18,7 +18,6 @@ const renderToastify = (text) => Toastify({
    onClick: function(){}
  }).showToast();
 
-
 async function addNewUser() {
    const signupButton = document.querySelector(".button-signup");
    const loadDiv = document.createElement("div");
@@ -31,7 +30,6 @@ async function addNewUser() {
 
    signupButton.removeChild(signupText);
    signupButton.appendChild(loadDiv);
-
 
    const newUser = {
       "email": document.querySelector("#email").value,
