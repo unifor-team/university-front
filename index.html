@@ -42,7 +42,8 @@
       <div id="login">
         <a class="btn-getstarted scrollto"  href="signin.html">Entrar</a>
       </div>
-      <div id="logout">
+      <div id="logout" class="div-logout">
+        <p class="user-name"></p>
         <a class="btn-getstarted scrollto" href="index.html" onclick="logout()">logout</a>
       </div>
       
@@ -55,7 +56,7 @@
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
       data-aos="zoom-out">
       <img src="https://www.svgrepo.com/show/5015/college-pin.svg" class="img-fluid animated" width="200">
-      <h2>Bem vindo(a) a <span>Universitech</span></h2>
+      <h2>Bem vindo(a) a <span>Universitech</span>, <span id="user-name-space"></span></h2>
       <p>A universidade perfeita para você que deseja imergir em tecnologia.</p>
       <div class="d-flex">
         <div id="hide-signup">
@@ -832,7 +833,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="ButtonControl.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
 
   <script src="assets/js/main.js"></script>
 

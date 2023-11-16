@@ -25,18 +25,18 @@
   align-items: center;
 }
 .signup input{
-
   height: 65px;
   border-color: #0EA2BD;
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: #E7E7E7;
-  ;
-  
+  padding: 1rem;
+  margin: 8px 0;
 }
+
 .signup input::placeholder{
-  color: #ffffff;
+  color: #707070;
 }
 .signup-container {
   width: 460px;
@@ -48,12 +48,12 @@
   flex-direction: column;
   gap: 10px;
   padding: 0 40px;
+  position: relative;
 }
 
 .logo {
   width: center; /*mexi aqui, tava 109px*/
   height: 109px;
-  margin-top: 40px;
   transform: translateY(0px);
   animation: float 5s ease-in-out infinite;
 
@@ -66,6 +66,7 @@
   border: none;
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
+  transition: 400ms all ease;
 }
 .button-home{
   background-color: #0EA2BD;
@@ -82,5 +83,17 @@
   transform: scale(0.97);
 }
 .button-signup:hover{
-  box-shadow: 0 0 0 0 #054753, inset 3px 3px 3px #075563;
+  border: 1px solid #0EA2BD;
+  background-color: #fff;
+  color: #0EA2BD;
+
+  & .lds-facebook div {
+    background: #0EA2BD;
+  }
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
 }
