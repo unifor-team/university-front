@@ -48,8 +48,9 @@ async function addNewUser() {
       setTimeout(() => {
          window.location.replace("signin.html");
       }, 1000);
+      
    } catch (e) {
-      renderToastify(e.message);
+      console.log(e.message)
    } finally {
       signupButton.appendChild(signupText);
       signupButton.removeChild(loadDiv);
