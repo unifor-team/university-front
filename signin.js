@@ -4,17 +4,45 @@ if (localStorage.getItem("token")) {
    window.location.replace("index.html");
 }
 
-async function addNewUser() {
-   userData = {
+const renderToastify = (text) => Toastify({
+   text,
+   duration: 3000,
+   newWindow: true,
+   close: true,
+   gravity: "top",
+   position: "right",
+   stopOnFocus: true,
+   style: {
+     background: "linear-gradient(to right, #00b09b, #96c93d)",
+   },
+   onClick: function(){}
+ }).showToast();
+
+
+async function addNewUser() { 
+
+   const signinButton = document.querySelector(".button-login");
+   const loadDiv = document.createElement("div");
+   const signinText = document.querySelector(".signup-text");
+
+   loadDiv.classList.add("lds-facebook");
+   loadDiv.appendChild(document.createElement("div"));
+   loadDiv.appendChild(document.createElement("div"));
+   loadDiv.appendChild(document.createElement("div"));
+
+   signinButton.removeChild(signinText);
+   signinButton.appendChild(loadDiv);
+
+  userData = {
       "email": document.querySelector("#email").value,
       "password": document.querySelector("#password").value
    }
-   if (userData.email == "") {
-      alert('Campo Email é obrigatório!')
+   if (userData.email == "" || userData.password == "" ) {
+      renderToastify("Email ou senha inválida")
    }
-   if (userData.password == "") {
-      alert('Campo Password é obrigatório!')
-   }
+
+
+   try{
    await axios.post(url, userData)
       .then((response) => {
          localStorage.setItem("token", JSON.stringify(response.data.token))
@@ -22,6 +50,13 @@ async function addNewUser() {
             window.location.replace("index.html");
          }, 2000);
       })
-      .catch(error => alert('usuário ou senha incorreto!'));
+   }catch(e ){
+      console.log(e.message)
+   }finally {
+      signinButton.appendChild(signinText);
+      signinButton.removeChild(loadDiv);
+   }
 }
+
+
 

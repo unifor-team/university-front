@@ -58,7 +58,7 @@
   animation: float 5s ease-in-out infinite;
 
 }
-.button-signup {
+.button-signup, .button-login {
   height: 65px;
   background-color: #0EA2BD;
   color: #fff;
@@ -78,11 +78,11 @@
   text-align: center;
 }
 .a
-.button-signup:active{
+.button-signup:active, .button-login:active{
   box-shadow: 0 0 0 0 #054753, inset 3px 3px 3px #075563;
   transform: scale(0.97);
 }
-.button-signup:hover{
+.button-signup:hover, .button-login:hover{
   border: 1px solid #0EA2BD;
   background-color: #fff;
   color: #0EA2BD;
