@@ -44,7 +44,7 @@ async function addNewUser() {
   try {
     const response = await axios.post(url, userData);
     renderToastify("Login efetuado com sucesso");
-    localStorage.setItem("token", JSON.stringify(response.data.token));
+    localStorage.setItem("token", response.data.token);
     setTimeout(() => {
       window.location.replace("index.html");
     }, 2000);
