@@ -47,22 +47,41 @@
       src="https://cdn.jsdelivr.net/npm/toastify-js"
       defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
   </head>
+
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo-admPage">
+        <h1>Universitech<span>.</span></h1>
+      </a>
+      <div id="logout" class="div-logout">
+        <p class="user-name"></p>
+        <a class="btn-getstarted scrollto" href="index.html" onclick="logout()">logout</a>
+      </div>
+      
+     
+    </div>
+      
+  </header>
+
   <body class="adm-page is-user">
-    <h1>adm</h1>
-    <button type="button" onclick="getAllUsers()">Chamar usuarios</button>
     <div class="ag-format-container">
       <div class="modal-container modal-none">
         <div class="item-modal-delete">
           <span class="modal-title">Deletar usuário</span>
           <p class="modal-subtitle">Deseja realmente deletar este usuário?</p>
           <div class="button-container">
-            <button>Cancelar</button>
+            <button onclick="closeModal()">Cancelar</button>
             <button class="delete-btn" onclick="deleteUser()">Deletar</button>
           </div>
         </div>
       </div>
       <div class="ag-courses_box"></div>
     </div>
+
+
+  <div id="preloader"></div>
   </body>
 </html>
