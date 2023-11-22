@@ -268,3 +268,7 @@ align-items: center;
 justify-content: center;
   
 }
+
+.showError{
+  display: none;
+}
