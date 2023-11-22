@@ -5,20 +5,19 @@ let currentId;
 
 const token = localStorage.getItem("token");
 
+
+
 if (token) {
   const decodedToken = jwtDecode(token);
   const username = document.querySelector(".user-name");
   username.innerHTML = decodedToken.Name;
-  const divError = createElement("div", "divError")
-  const errorMessage = createElement("h1", "errorMessage")
-  const body = document.querySelector(".adm-page")
-  body.appendChild(divError)
-  errorMessage.innerHTML = "PAGE NOT FOUND - 404"
-  divError.appendChild(errorMessage)
 
-
-  
-
+  if (decodedToken.Roles !== "ADMIN") {
+    const pageNotFound = document.querySelector(".divError")
+    pageNotFound.classList.remove("showError")
+    const container = document.querySelector(".ag-format-container")
+    container.classList.add("showError")
+  }
 }
 
 const renderToastify = text =>
@@ -33,7 +32,7 @@ const renderToastify = text =>
     style: {
       background: "linear-gradient(to right, #00b09b, #96c93d)"
     },
-    onClick: function () {}
+    onClick: function () { }
   }).showToast();
 
 
@@ -42,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load',() => {
-      setTimeout(()=>{
+    window.addEventListener('load', () => {
+      setTimeout(() => {
         preloader.remove();
       }, 1000)
     });
@@ -92,24 +91,19 @@ async function getAllUsers() {
 
   users = (await axios.get(url, { headers: headers })).data;
   listUsersOnScreen();
-  
+
 }
 window.onload = getAllUsers();
- 
 
 
-function closeModal(){
+
+function closeModal() {
   const modalContainer = document.querySelector(".modal-container");
   modalContainer.classList.add("modal-none")
 }
 
 function listUsersOnScreen() {
   if (!users) return;
-
-  // if (bgItemUsers) {
-  //   bgItemUsers.innerHTML = "";
-  // }
-
   const itemContainer = document.querySelector(".ag-courses_box");
 
   users.forEach(user => {
