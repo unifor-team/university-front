@@ -20,7 +20,6 @@ async function deleteUser() {
     console.log(err);
   }
 }
-
 function parseDateTimeToDate(datetime) {
   if (!datetime) return "";
 
@@ -78,6 +77,7 @@ function listUsersOnScreen() {
     const itemBg = createElement("div", "ag-courses-item_bg");
     const itemTitle = createElement("div", "ag-courses-item_title");
     const itemSubtitle = createElement("div", "ag-courses-item_subtitle");
+    const itemRole = createElement("div", "ag-courses-item_role");
     const itemDate = createElement("div", "ag-courses-item_date-box");
     const spanItemDate = createElement("span", "ag-courses-item_date");
 
@@ -88,10 +88,11 @@ function listUsersOnScreen() {
 
     itemTitle.innerHTML = user.name;
     itemSubtitle.innerHTML = user.email;
-
+    itemRole.innerHTML = "Cargo: " + user.role;
     anchor.appendChild(itemBg);
     anchor.appendChild(itemTitle);
     anchor.appendChild(itemSubtitle);
+    anchor.appendChild(itemRole);
     anchor.appendChild(itemDate);
 
     item.appendChild(anchor);
